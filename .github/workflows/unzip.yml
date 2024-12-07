@@ -15,7 +15,7 @@ jobs:
       - name: Extract ZIP files
         run: |
           for file in *.zip; do
-            unzip -o "$file" -d ./unzipped/
+            unzip -o "$file" -d ./
           done
 
       - name: Push unzipped files
