@@ -1,27 +1,34 @@
-name: Unzip Uploaded Files
+name: Unzip and Commit to Main
 
 on:
   push:
     paths:
-      - "*.zip" # Trigger the action only when ZIP files are pushed
+      - "*.zip" # Trigger the action when ZIP files are pushed
 
 jobs:
   unzip:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }} # Checks out the active branch
 
-      - name: Extract ZIP files
+      - name: Extract ZIP Files
         run: |
           for file in *.zip; do
-            unzip -o "$file" -d ./
+            unzip -o "$file" -d ./ # Extract contents to the root directory
           done
 
-      - name: Push unzipped files
+      - name: Configure Git
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "your_email@example.com"
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit Changes
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
           git add .
           git commit -m "Add unzipped files"
-          git push
+          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} ${{ github.ref }}
