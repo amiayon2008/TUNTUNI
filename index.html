@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="user-data">
-                    <span class="name" id="full-name">UNKNOWN</span>
+                    <span class="name" id="username">UNKNOWN</span>
                     <span class="user-rank">#999999+</span>
                 </div>
             </div>
@@ -142,6 +142,7 @@ const webApp = Telegram.WebApp;
                 const userId = String(user.id); // Ensure userId is a string
                 const userName = user.username || user.first_name || "Unknown";
               document.getElementById("username").innerHTML = userName;
+                document.getElementById("userImg").src = user.photo_url;
             }
     else{
         console.error("user not active");
