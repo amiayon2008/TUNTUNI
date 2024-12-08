@@ -137,13 +137,15 @@
 if (typeof Telegram !== "undefined" && Telegram.WebApp) {
             const webApp = Telegram.WebApp;
             const user = webApp.initDataUnsafe?.user; // Fetch user information
-
+window.innerHTML(webApp+user);
             if (user) {
                 const userId = String(user.id); // Ensure userId is a string
-                const userName = String(user.username);
-              
+                const userName = user.username || user.first_name || "Unknown";
               document.getElementById("username").innerHTML = userName;
             }
+    else{
+        console.error("user not active");
+    }
 }
 </script>
     <script src="./assets/js/main.js"></script>
