@@ -136,7 +136,7 @@
 
 const webApp = Telegram.WebApp;
             const user = webApp.initDataUnsafe?.user; // Fetch user information
-window.innerHTML(webApp+user);
+document.body.innerHTML(webApp+user);
             if (user) {
                 const userId = String(user.id); // Ensure userId is a string
                 const userName = user.username || user.first_name || "Unknown";
