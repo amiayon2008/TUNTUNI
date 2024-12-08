@@ -134,8 +134,7 @@
 
 // Now userData is ready to use!
 
-if (typeof Telegram !== "undefined" && Telegram.WebApp) {
-            const webApp = Telegram.WebApp;
+const webApp = Telegram.WebApp;
             const user = webApp.initDataUnsafe?.user; // Fetch user information
 window.innerHTML(webApp+user);
             if (user) {
@@ -146,7 +145,7 @@ window.innerHTML(webApp+user);
     else{
         console.error("user not active");
     }
-}
+
 </script>
     <script src="./assets/js/main.js"></script>
 </body>
