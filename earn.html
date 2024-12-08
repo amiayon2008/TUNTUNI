@@ -8,6 +8,11 @@
       <link rel="stylesheet" href="./assets/css/responsive.css">
       <meta name="theme-color" content="#f19e36" />
       <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+      <script src='https://niphaumeenses.net/vignette.min.js' data-zone='8541728' data-sdk='show_8541728'></script>
+      <script src='https://niphaumeenses.net/vignette.min.js' data-zone='8541723' data-sdk='show_8541723'></script>
+      <script src='https://niphaumeenses.net/vignette.min.js' data-zone='8624416' data-sdk='show_8624416'></script>
+      <script src='https://niphaumeenses.net/vignette.min.js' data-zone='8584038' data-sdk='show_8584038'></script>
+      <script src='https://niphaumeenses.net/vignette.min.js' data-zone='8624398' data-sdk='show_8624398'></script>
    </head>
    <body class="earn">
       <div class="haeder">
@@ -139,29 +144,69 @@
       <div class="invite-bonus-box">
       </div>
       <script src="./assets/js/charge.js"></script>
-<script>
-// Define redirects for each ID
-const redirects = {
-    ayon_1: "https://luglawhaulsano.net/4/8621882",
-    ayon_2: "https://luglawhaulsano.net/4/8621882",
-    raheeb: "https://luglawhaulsano.net/4/8586574",
-    shantanu: "https://luglawhaulsano.net/4/8574920",
-    yeamin: "https://luglawhaulsano.net/4/8462625",
-    fahim: "https://luglawhaulsano.net/4/8621886"
-};
-
-// Add event listeners to each div
-document.querySelectorAll("div").forEach(div => {
-    div.addEventListener("click", () => {
-        const url = redirects[div.id];
-        if (url) {
-            window.location.href = url; // Redirect to the corresponding URL
-        } else {
-            console.log("No URL mapped for this ID:", div.id);
-        }
-    });
-});
-
-</script>
+      <script>
+         const ayon_1 = document.getElementById("ayon_1");
+         const ayon_2 = document.getElementById("ayon_2");
+         const raheeb = document.getElementById("raheeb");
+         const shantanu = document.getElementById("shantanu");
+         const yeamin = document.getElementById("yeamin");
+         const fahim = document.getElementById("fahim");
+         
+         
+         ayon_1.addEventListener("click", function(){ 
+           
+         show_8541728().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+         ayon_2.addEventListener("click", function(){ 
+           
+         show_8541728().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+         raheeb.addEventListener("click", function(){ 
+           
+         show_8541723().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+         shantanu.addEventListener("click", function(){ 
+           
+         show_8624416().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+         yeamin.addEventListener("click", function(){ 
+           
+         show_8584038().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+         fahim.addEventListener("click", function(){ 
+           
+         show_8624398().then(() => {
+             // You need to add your user reward function here, which will be executed after the user watches the ad.
+             // For more details, please refer to the detailed instructions.
+             alert('Rewards Granted');
+         })
+                 
+         });
+      </script>
    </body>
 </html>
